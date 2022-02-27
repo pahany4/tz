@@ -814,6 +814,117 @@ tbody tr:nth-child(8n+7) {
   left: 0;
 }
 
+.root5 {
+  padding: 50px;
+}
+
+.progressbar {
+  height: 20px;
+  position: relative;
+  background: #eee;
+  border-radius: 4px;
+}
+
+.progressbar div {
+  border-radius: 4px;
+  background-color: #f0a3a3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0a3a3), to(#f42323));
+  background-image: -o-linear-gradient(top, #f0a3a3, #f42323);
+  background-image: linear-gradient(to bottom, #f0a3a3, #f42323);
+  height: 100%;
+  position: relative;
+  -webkit-animation: completion 20s steps(4, start) infinite;
+          animation: completion 20s steps(4, start) infinite;
+}
+
+.progressbar div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  z-index: 1;
+  background-size: 50px 50px;
+  -webkit-animation: move 2s linear infinite;
+          animation: move 2s linear infinite;
+  overflow: hidden;
+}
+
+/**
+* Анимация движения полосок
+*/
+
+@-webkit-keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/**
+* Анимация заполнения
+*/
+
+@-webkit-keyframes completion {
+  0% {
+    width: 0;
+  }
+
+  25% {
+    width: 25%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  75% {
+    width: 75%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes completion {
+  0% {
+    width: 0;
+  }
+
+  25% {
+    width: 25%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  75% {
+    width: 75%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 @media (min-width: 600px) {
   .main_task2 {
     -ms-grid-rows: 1fr 200px;
