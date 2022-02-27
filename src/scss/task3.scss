@@ -1,0 +1,83 @@
+/**
+  * Не стал использовать mobile first, т.к. проще переопределить
+  * элементы таблицы в display: block, чем переопределять
+  * в табличные display
+*/
+.root3 {
+  padding: 50px;
+}
+
+.caption {
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  border-collapse: collapse;
+}
+
+.table thead {
+  font-weight: bold;
+  text-transform: uppercase;
+  position: sticky;
+  top: -1px;
+  background: #fff;
+}
+.table th {
+  border: 1px solid #e3e3e3;
+  padding: 10px 10px;
+}
+
+.table td {
+  padding: 10px 10px;
+  border: 1px solid #e3e3e3;
+  text-align: center;
+}
+
+tbody {
+  tr:nth-child(8n + 1) {
+    background-color: #cfe2ff;
+  }
+
+  tr:nth-child(8n + 3) {
+    background-color: #f8d7da;
+  }
+
+  tr:nth-child(8n + 5) {
+    background-color: #d1e7dd;
+  }
+
+  tr:nth-child(8n + 7) {
+    background-color: #fff3cd;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .table {
+    border: none;
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    td {
+      display: block;
+      text-align: right;
+      padding: 10px 10px;
+      border: 1px solid #e3e3e3;
+    }
+
+    td:before {
+      content: attr(aria-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
