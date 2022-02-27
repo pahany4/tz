@@ -1,0 +1,104 @@
+.root1 {
+  padding-top: 30px;
+}
+
+.container_task1 {
+  margin: auto;
+}
+
+.outer1, .outer2, .outer3, .outer4, .outer5 {
+  width: 600px;
+  height: 100px;
+
+  background: #FFFFFF;
+  border: 1px solid #34A68A;
+  border-radius: 5px;
+  margin: 0 auto 30px;
+}
+
+.inner1, .inner2, .inner3, .inner4, .inner5 {
+  width: 158px;
+  height: 33px;
+
+  border: 1px solid #FF0000;
+  border-radius: 5px;
+
+  /**
+  * Выравнивание текста по центру
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+}
+
+  /**
+  * Первый вариант. Недостаток - необходимо знать высоту внешнего контейнера.
+  */
+  .outer1 {
+  line-height: 100px;
+  text-align: center;
+
+  .inner1 {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+}
+
+  /**
+  * Второй вариант. Преимущество - более современный способ,
+  * хорошая поддержка браузерами flexbox,
+  * не важны размеры внешнего контейнера.
+  */
+.outer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  /**
+  * Третий вариант. Преимущество - современный способ,
+  * не важны размеры внешнего контейнера.
+  * Недостаток - плохая поддержка IE (только IE11 с префиксами).
+  */
+.outer3 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+  /**
+  * Четвертый вариант. Преимущество - хорошо использовать в модальных окнах,
+  * когда не известны размеры внешнего контейнера.
+  */
+.outer4 {
+  position: relative;
+
+  .inner4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+  /**
+  * Пятый вариант. Преимущество - кроссбраузерность.
+  * Недостаток - сложная структура html.
+  */
+.table {
+  display: table;
+
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    .inner5 {
+      display: inline-flex;
+    }
+  }
+}
+
+

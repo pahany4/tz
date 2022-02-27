@@ -1,0 +1,94 @@
+.main_task2 {
+  min-height: 2000px;
+
+  display: grid;
+  grid-template-rows: 1fr 200px 200px;
+
+  @media (min-width: 600px) {
+    grid-template-rows: 1fr 200px;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 800px) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 150px 1fr 150px;
+  }
+}
+
+.header_task2 {
+  /**
+  * Фиксация header при скролле
+  */
+  position: sticky;
+  top: 0;
+
+  height: 50px;
+  background-color: #FD9191;
+
+}
+
+.footer_task2 {
+  /**
+  * Прижатие footer к низу страницы
+  */
+  position: sticky;
+  bottom: 0;
+
+  height: 50px;
+  background-color: #DFFF9B;
+}
+
+.header_task2,
+.footer_task2,
+.content_task2,
+.sidebar1_task2,
+.sidebar2_task2 {
+  font-weight: bold;
+  font-size: 12px;
+
+  /**
+  * Выравнивание текста по центру
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_task2 {
+  background-color: #94CBFF;
+
+  @media (min-width: 600px) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  @media (min-width: 800px) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+.sidebar1_task2 {
+  background-color: #E4C1FF;
+
+  @media (min-width: 800px) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.sidebar2_task2 {
+  background-color: #FDFF83;
+  min-height: 200px;
+
+  @media (min-width: 800px) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+}
+
+.sidebar1_task2,
+.sidebar2_task2,
+.content_task2 {
+  @media (min-width: 800px) {
+    grid-row-start: 1;
+  }
+}
