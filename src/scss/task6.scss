@@ -1,0 +1,55 @@
+.root6 {
+  padding: 50px;
+}
+
+.icon_container {
+  margin-bottom: 28px;
+}
+
+.task6_icon__jump {
+  animation: jump 2s infinite ease;
+}
+
+.button_container {
+  display: flex;
+  justify-content: start;
+
+  .task6_button__start-animation {
+    margin-right: 24px;
+  }
+}
+
+.task6_button {
+  padding: 8px 12px 8px 16px;
+  background: #0066FF;
+  border-radius: 20px;
+
+  line-height: 100%;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+
+@keyframes jump {
+  0% {
+    transform: translatey(0px);
+  }
+  20% {
+    transform: translatey(-15px);
+  }
+  30% {
+    transform: translatey(0px);
+  }
+  40% {
+    transform: translatey(-15px);
+  }
+  50% {
+    transform: translatey(0px);
+  }
+  60% {
+    transform: translatey(-15px);
+  }
+  70% {
+    transform: translatey(0px);
+  }
+}
+
