@@ -1,4 +1,16 @@
+/**
+ * Футер прижимается к низу, если мало контента,
+ * с помощью свойств flex.
+*/
+.root2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .main_task2 {
+
+  flex: 1 0 auto;
+
   min-height: 2000px;
 
   display: grid;
@@ -21,18 +33,15 @@
   position: sticky;
   top: 0;
 
+  flex: 0 0 auto;
+
   height: 50px;
   background-color: #FD9191;
 
 }
 
 .footer_task2 {
-  /**
-  * Прижатие footer к низу страницы
-  */
-  position: sticky;
-  bottom: 0;
-
+  flex: 0 0 auto;
   height: 50px;
   background-color: #DFFF9B;
 }

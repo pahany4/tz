@@ -567,7 +567,26 @@ button {
   display: inline-flex;
 }
 
+/**
+ * Футер прижимается к низу, если мало контента,
+ * с помощью свойств flex.
+*/
+
+.root2 {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .main_task2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   min-height: 2000px;
   display: -ms-grid;
   display: grid;
@@ -581,16 +600,17 @@ button {
   */
   position: sticky;
   top: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   height: 50px;
   background-color: #FD9191;
 }
 
 .footer_task2 {
-  /**
-  * Прижатие footer к низу страницы
-  */
-  position: sticky;
-  bottom: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   height: 50px;
   background-color: #DFFF9B;
 }
